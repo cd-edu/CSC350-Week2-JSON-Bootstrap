@@ -1,8 +1,9 @@
+// Array containing singer objects and their name, song, and date-of-birth information.
 const singers = [
     {
         name: "Vessel",
         song: "Caramel",
-        dob: "December 22, 1993",
+        dob: "Not publicly disclosed",
     },
     {
         name: "Stevie Nicks",
@@ -22,8 +23,10 @@ const singers = [
 
 ];
 
+// Reference to the HTML table body where the singer rows will be displayed.
 const singerTableBody = document.getElementById("singerTableBody");
 
+// Loop through each singer object and create one table row for its information.
 singers.forEach(function(singer) {
     const row = document.createElement("tr");
 
@@ -36,9 +39,11 @@ singers.forEach(function(singer) {
     const dobCell = document.createElement("td");
     dobCell.textContent = singer.dob;
 
+    // Add the three data cells to the current table row.
     row.appendChild(nameCell);
     row.appendChild(songCell);
     row.appendChild(dobCell);
 
+    // Add the completed singer row to the Bootstrap table body.
     singerTableBody.appendChild(row);
 });
